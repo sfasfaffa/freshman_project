@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thylesf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加新用户</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+<h1>添加新用户</h1>
+<hr>
+<div>
+    <p th:text="${msg}" style="color:red;"></p>
+
+
+    <form th:action="@{/user/doadd}">
+        <p>用户名:<input type="text" name="username"></p>
+        <P>密码:<input type="text" name="password"></P>
+        <P>身份:<input type="text" name="perms"></P>
+        <p><input type="submit"></p>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<title>更新用户密码</title>
+<style>
+        h1{
+            text-align:center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+<h1>更新用户密码</h1>
+<hr>
+
+<form th:action="@{/user/doupdate}">
+    <p>原用户名:<input type="text" name="username"></p>
+    <p>原密码:<input type="text" name="ppassword"></p>
+    <P>新密码:<input type="text" name="npassword"></P>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>

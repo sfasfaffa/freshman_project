@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thylesf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加课程</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+<h1>添加课程</h1>
+<hr>
+<form th:action="@{/doaddclazz}">
+    <p>课程名:<input type="text" name="clazzname"></p>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>
+</html>

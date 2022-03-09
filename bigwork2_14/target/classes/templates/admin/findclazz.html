@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thylesf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>管理授权班级</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+        .center{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>以下是所有课程:</h1>
+    <p th:text="${msg}" style="color:black;"></p>
+    <p>请选择要管理的班级,授权之后学生才可以选课</p>
+    <p th:text="${eup}" style="color:red;"></p>
+    <form th:action="@{/administrator/dofindallclazz}">
+        <p>班级ID:<input type="text" name="clazzname"></p>
+        <input type="radio" name="choose" value="1" /> 授权
+        <input type="radio" name="choose" value="0" /> 撤销授权
+        <div class="center">
+            <input type="submit" class="submit">
+            <br/>
+            <a th:href="@{/administrator}">返回</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

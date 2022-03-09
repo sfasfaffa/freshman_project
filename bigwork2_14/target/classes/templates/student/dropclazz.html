@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thylesf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>退课界面</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+<h1>退课</h1>
+<hr>
+<form th:action="@{/dodropclazz}">
+    <p>课程ID:<input type="text" name="id"></p>
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>
